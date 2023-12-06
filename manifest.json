@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Quote of the Day",
+    "version": "1.0",
+    "description": "Displays a daily quote for inspiration.",
+    "permisions": [
+        "storage"
+      ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "61FSk06chSL.png",
+      "48": "61FSk06chSL.png",
+      "128": "61FSk06chSL.png"
+    },
+    "permissions": [
+      "activeTab",
+      "storage"
+    ]
+  }
+  
